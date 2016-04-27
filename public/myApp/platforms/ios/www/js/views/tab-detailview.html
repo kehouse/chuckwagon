@@ -1,0 +1,33 @@
+<!--
+  This template loads for the 'tab.detailview' state (app.js)
+  'truck' is a $scope variable created in the ListviewCtrl controller (controllers.js)
+  The ListviewCtrl pulls data from the TruckService(service.js)
+  The TruckService returns an array of vendor data
+-->
+<ion-view>
+  <ion-nav-title style="font-size: 20px; font-family: Bevan; text-shadow: 2px 1px 1px #565555 ">
+   CHUCKWAGON
+ </ion-nav-title>  <ion-content class="padding">
+    <div id="detailview">
+      <div id="detail-header">
+        <img ng-src="{{truck.profilePictureLocation}}">
+        <h3>{{truck.vendorName}}</h3>
+        <h4><span class="tag-span" ng-repeat="tag in truck.tagsList">{{ tag }} </span></h4>
+        <label ng-click="addFavoriteTruck(truck.id, truck.heart)" ng-class="{'heart ion-ios-heart': truck.heart,'ion-ios-heart-outline': !truck.heart}" class="detail-heart">
+          <input ng-model="truck.heart" style="display:none;" type="checkbox">
+        </label>
+      </div>
+      <p>
+        {{truck.bio}}
+      </p>
+      <div id="map-detail"></div>
+      <div ng-show="hasContent()" class="card">
+        <div class="item item-text-wrap">
+          <h4>{{ truck.location.created }}</h4>
+          <h3 ng-show="truck.location.tweet">{{ truck.location.tweet }}</h3>
+          <img ng-show="truck.location.imageUrl" ng-src="{{ truck.location.imageUrl }}">
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

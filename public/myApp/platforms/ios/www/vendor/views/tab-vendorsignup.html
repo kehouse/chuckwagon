@@ -1,0 +1,49 @@
+<ion-view>
+  <ion-nav-title style="font-size: 20px; font-family: Bevan; text-shadow: 2px 1px 1px #565555 ">
+   CHUCKWAGON
+ </ion-nav-title>
+  <ion-content class="padding">
+
+    <h2>ChuckWagon</h2>
+<div class="form-wrap">
+    <form method="post" ng-submit="signup()" name="signupForm">
+  <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.displayName.$invalid && signupForm.displayName.$dirty }">
+    <input class="form-control input-lg" type="text" name="displayName" ng-model="vendor.vendorName" placeholder="TRUCK NAME" required autofocus>
+    <span class="ion-android-bus form-control-feedback"></span>
+    <div class="help-block text-danger" ng-if="signupForm.displayName.$dirty" ng-messages="signupForm.displayName.$error">
+      <div ng-message="required" class="required">You must enter your name.</div>
+    </div>
+  </div>
+
+  <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.email.$invalid && signupForm.email.$dirty }">
+    <input class="form-control input-lg" type="email" id="email" name="email" ng-model="vendor.contactEmail" placeholder="EMAIL" required>
+    <span class="ion-at form-control-feedback"></span>
+    <div class="help-block text-danger" ng-if="signupForm.email.$dirty" ng-messages="signupForm.email.$error">
+      <div ng-message="required" class="required">Your email address is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.password.$invalid && signupForm.password.$dirty }">
+    <input password-strength class="form-control input-lg" type="password" name="password" ng-model="vendor.password" placeholder="PASSWORD" required>
+    <span class="ion-key form-control-feedback"></span>
+    <div class="help-block text-danger" ng-if="signupForm.password.$dirty" ng-messages="signupForm.password.$error">
+      <div ng-message="required" class="required">Password is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group has-feedback" ng-class="{ 'has-error' : signupForm.confirmPassword.$invalid && signupForm.confirmPassword.$dirty }">
+    <input password-match="vendor.password" class="form-control input-lg" type="password" name="confirmPassword" ng-model="confirmPassword" placeholder="CONFIRM PASSWORD">
+    <span class="ion-key form-control-feedback"></span>
+    <div class="help-block text-danger" ng-if="signupForm.confirmPassword.$dirty" ng-messages="signupForm.confirmPassword.$error">
+      <div ng-message="compareTo" class="required">Password must match.</div>
+    </div>
+  </div>
+</div>
+</form>
+<div class="submit-wrap">
+  <a href="#/tab/vendordashboard"><button ng-click="signup(vendor)" class="button button-block button-dark special" type="submit" name="button">APPLY FOR ACCOUNT</button></a>
+  <a href="#/tab/home"><button class="button button-block button-dark" type="submit" name="button">CANCEL</button></a>
+</div>
+
+  </ion-content>
+</ion-view>

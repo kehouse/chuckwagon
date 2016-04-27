@@ -1,0 +1,94 @@
+<ion-view>
+  <ion-nav-title style="font-size: 20px; font-family: Bevan; text-shadow: 2px 1px 1px #565555 ">
+   CHUCKWAGON
+ </ion-nav-title>
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input ng-model="searchOptions.keyword" type="text" placeholder="Search by Truck Name">
+      </label>
+      <div class="tag-wrap">
+        <ul>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[11]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[11]" ng-true-value="'Burritos'" style="display:none;" type="checkbox">
+               Burritos
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[8]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[8]" ng-true-value="'Seafood'" style="display:none;" type="checkbox">
+               Seafood
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[1]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[1]" ng-true-value="'BBQ'" style="display:none;" type="checkbox">
+               BBQ
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[3]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[3]" ng-true-value="'Pizza'" style="display:none;" type="checkbox">
+               Pizza
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[4]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[4]" ng-true-value="'Coffee'" style="display:none;" type="checkbox">
+               Coffee
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[5]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[5]" ng-true-value="'Ice Cream'" style="display:none;" type="checkbox">
+               Ice Cream
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[6]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[6]" ng-true-value="'Tacos'" style="display:none;" type="checkbox">
+               Tacos
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[7]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[7]" ng-true-value="'Salads'" style="display:none;" type="checkbox">
+               Salads
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[2]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[2]" ng-true-value="'Stir Fry'" style="display:none;" type="checkbox">
+               Stir Fry
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[9]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[9]" ng-true-value="'Breakfast'" style="display:none;" type="checkbox">
+               Breakfast
+             </label>
+          </li>
+          <li>
+             <label ng-class="{'checked': searchOptions.tags[10]}" class="tag button button-outline button-assertive button-large">
+               <input ng-model="searchOptions.tags[10]" ng-true-value="'Juice & Smoothies'" style="display:none;" type="checkbox">
+               Juice & Smoothies
+             </label>
+          </li>
+        </ul>
+      </div>
+<!--
+    <label class="item item-input item-select">
+      <div class="input-label">&nbsp;</div>
+      <select ng-model="searchOptions.radius" class="search-items">
+        <option value="1">1 Mile</option>
+        <option value="5">5 Miles</option>
+        <option value="10">10 Miles</option>
+        <option value="25">25 Miles</option>
+      </select>
+    </label> -->
+    <a ng-click="sendSearchOptions(searchOptions)" href="#/tab/search-map"><button class="button button-block button-calm" type="submit" name="button">FIND TRUCKS</button></a>
+  </div>
+  </ion-content>
+</ion-view>

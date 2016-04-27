@@ -1,0 +1,20 @@
+<ion-view>
+  <ion-nav-title style="font-size: 20px; font-family: Bevan; text-shadow: 2px 1px 1px #565555 ">
+   CHUCKWAGON
+ </ion-nav-title>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="truck in trucks" type="item-text-wrap">
+        <a ng-href="#/tab/list/{{truck.id}}">
+        <img class="search-img" ng-src="{{ truck.profilePictureLocation }}">
+        <h2>{{truck.vendorName}}</h2>
+        <p><span class="tag-span" ng-repeat="tag in truck.tagsList">{{ tag }} </span></p>
+      </a>
+        <!-- <i class="icon ion-chevron-right icon-accessory"></i> -->
+        <label ng-click="addFavoriteTruck(truck.id, truck.heart)" ng-class="{'heart ion-ios-heart': truck.heart,'ion-ios-heart-outline': !truck.heart}" class="icon">
+          <input ng-model="truck.heart" style="display:none;" type="checkbox">
+        </label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

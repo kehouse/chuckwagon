@@ -1,0 +1,30 @@
+<!--
+  This template loads for the 'tab.detailview' state (app.js)
+  'truck' is a $scope variable created in the ListviewCtrl controller (controllers.js)
+  The ListviewCtrl pulls data from the TruckService(service.js)
+  The TruckService returns an array of vendor data
+-->
+<ion-view>
+  <ion-nav-title style="font-size: 20px; font-family: Bevan; text-shadow: 2px 1px 1px #565555 ">
+   CHUCKWAGON
+ </ion-nav-title>  <ion-content class="padding">
+    <div id="detailview">
+      <div id="detail-header">
+        <img ng-src="{{currentVendor.profilePictureLocation}}">
+        <h3>{{currentVendor.vendorName}}</h3>
+        <h4>{{currentVendor.tags}}</h4>
+      </div>
+      <p>
+        {{currentVendor.bio}}
+      </p>
+      <div id="map-detail"></div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          <h4>{{currentVendor.location.time}}</h4>
+          <h3>{{currentVendor.location.tweet}}</h3>
+          <img ng-src="{{currentVendor.location.imageUrl}}">
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

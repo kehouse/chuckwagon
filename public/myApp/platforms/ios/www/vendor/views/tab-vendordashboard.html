@@ -1,0 +1,51 @@
+<ion-view>
+  <ion-nav-title style="font-size: 20px; font-family: Bevan; text-shadow: 2px 1px 1px #565555 ">
+   CHUCKWAGON
+ </ion-nav-title>
+  <ion-content>
+    <h1>Welcome, {{currentVendor.vendorName}}</h1>
+
+    <a href="#/tab/home"><button class="button" ng-click="logoutVendor()">LOGOUT</button></a>
+
+    <label class="item item-input item-stacked-label">
+      <input type="text" placeholder="Upload Image" ng-model="post.imageUrl">
+    </label>
+
+    <label class="item item-input item-select">
+      <div class="input-label">&nbsp;</div>
+      <select class="lift-pin" ng-model="post.expiresString">
+        <option value="1">1 Hour</option>
+        <option value="1.5">1.5 Hours</option>
+        <option value="2">2 Hours</option>
+        <option value="2.5">2.5 Hours</option>
+        <option value="3">3 Hours</option>
+        <option value="3.5">3.5 Hours</option>
+        <option value="4">4 Hours</option>
+        <option value="4.5">4.5 Hours</option>
+        <option value="5">5 Hours</option>
+        <option value="5.5">5.5 Hours</option>
+        <option value="6">6 Hours</option>
+        <option value="6.5">6.5 Hours</option>
+        <option value="7">7 Hours</option>
+        <option value="7.5">7.5 Hours</option>
+        <option value="8">8 Hours</option>
+        <option value="8.5">8.5 Hours</option>
+        <option value="9">9 Hours</option>
+        <option value="9.5">9.5 Hours</option>
+        <option value="10">10 Hours</option>
+        <option value="10.5">10.5 Hours</option>
+        <option value="11">11 Hours</option>
+        <option value="11.5">11.5 Hours</option>
+        <option value="12">12 Hours</option>
+      </select>
+    </label>
+
+    <label class="item item-input item-stacked-label">
+      <input type="text" placeholder="Type a message" ng-model="post.tweet">
+    </label>
+
+<button ng-hide="gotLocation()" disabled class="button button-block button-dark" type="button" name="button">GETTING LOCATION...</button>
+<a href="#/tab/vendordashboard/{{currentVendor.id}}"><button ng-hide="!gotLocation()" ng-click="dropPin(post, currentVendor.id)" class="button button-block button-calm" type="button" name="button">DROP PIN</button></a>
+
+  </ion-content>
+</ion-view>

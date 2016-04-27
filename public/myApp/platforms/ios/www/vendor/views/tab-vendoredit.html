@@ -1,0 +1,92 @@
+<ion-view>
+  <ion-nav-title style="font-size: 20px; font-family: Bevan; text-shadow: 2px 1px 1px #565555 ">
+   CHUCKWAGON
+ </ion-nav-title>
+  <ion-content class="padding">
+  <div class="list">
+    <h3>{{ currentVendor.vendorName }}</h3>
+    <h4>{{ currentVendor.contactEmail }}</h4>
+    <label class="item item-input">
+      <input type="text" ng-model="editedVendor.bio" value="vendor.bio" placeholder="Bio">
+    </label>
+    <label class="item item-input">
+      <input type="text" ng-model="editedVendor.profilePictureLocation" value="vendor.profilePictureLocation" placeholder="Profile Photo URL">
+    </label>
+    </form>
+    <div class="tag-wrap">
+      <ul>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[11]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[11]" ng-true-value="'Burritos'" style="display:none;" type="checkbox">
+             Burritos
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[8]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[8]" ng-true-value="'Seafood'" style="display:none;" type="checkbox">
+             Seafood
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[1]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[1]" ng-true-value="'BBQ'" style="display:none;" type="checkbox">
+             BBQ
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[3]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[3]" ng-true-value="'Pizza'" style="display:none;" type="checkbox">
+             Pizza
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[4]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[4]" ng-true-value="'Coffee'" style="display:none;" type="checkbox">
+             Coffee
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[5]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[5]" ng-true-value="'Ice Cream'" style="display:none;" type="checkbox">
+             Ice Cream
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[6]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[6]" ng-true-value="'Tacos'" style="display:none;" type="checkbox">
+             Tacos
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[7]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[7]" ng-true-value="'Salads'" style="display:none;" type="checkbox">
+             Salads
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[2]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[2]" ng-true-value="'Stir Fry'" style="display:none;" type="checkbox">
+             Stir Fry
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[9]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[9]" ng-true-value="'Breakfast'" style="display:none;" type="checkbox">
+             Breakfast
+           </label>
+        </li>
+        <li>
+           <label ng-class="{'checked': editedVendor.tags[10]}" class="tag button button-outline button-assertive button-large">
+             <input ng-model="editedVendor.tags[10]" ng-true-value="'Juice & Smoothies'" style="display:none;" type="checkbox">
+             Juice & Smoothies
+           </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <button ng-click="editVendor(editedVendor)" class="button button-block button-calm" type="submit" name="button">SUBMIT CHANGES</button>
+  <button class="button button-block button-assertive" type="submit" name="button">CANCEL</button>
+
+  </ion-content>
+</ion-view>

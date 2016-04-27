@@ -1,0 +1,40 @@
+<ion-view>
+  <ion-nav-title style="font-size: 20px; font-family: Bevan; text-shadow: 2px 1px 1px #565555 ">
+   CHUCKWAGON
+ </ion-nav-title>
+  <ion-content>
+    <div class="map-bg">
+      <div class="tint">
+        <div class="non-semantic-protector">
+          <img id="chuckwagon-logo" src="logo-pin-shadow-white.png" alt=""/>
+          <h1 class="ribbon">
+            <strong class="ribbon-content">CHUCKWAGON</strong>
+          </h1>
+        </div>
+
+        <!-- <a ng-show="isLoggedIn()" href="#/tab/home"><button class="button" ng-click="toggleVendorView()">LOGOUT</button></a> -->
+
+      <!-- <div ng-show="!isLoggedIn()"> -->
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="EMAIL" ng-model="login.contactEmail">
+          </label>
+          <label class="item item-input">
+            <input type="password" placeholder="PASSWORD" ng-model="login.password">
+          </label>
+        </div>
+
+        <button ng-click="loginVendor(login)" class="button button-block button-positive" type="submit" name="button">LOGIN</button>
+        <a ui-sref="tab.map" ng-click="toggleVendorView()"><button class="button button-block button-assertive" type="button" name="button">CANCEL</button></a>
+
+        <div class="center">
+          <p>
+            not a member?
+          </p>
+          <a href="#/tab/vendorsignup"><button class="button button-calm" type="button" name="button">SIGN-UP</button></a>
+        </div>
+      <!-- </div> -->
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
